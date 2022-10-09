@@ -1,12 +1,17 @@
 import './App.css'
 import Clock from "./components/Clock/index.jsx";
 
-function App() {
-  return (
-    <div className="App">
-      <Clock />
-    </div>
-  )
+function DisableScroll() {
+    document.body.style.overflow = 'hidden';
 }
 
-export default App
+function App() {
+    DisableScroll();
+    return (
+        <div className="App">
+            <Clock/>
+        </div>
+    )
+}
+
+export default App;

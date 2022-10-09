@@ -1,12 +1,25 @@
 import './index.scss'
-export default function Clock(){
 
-    return(
+function Divider(){
+    return (
+        <div className="divider">
+        </div>
+    )
+}
+
+
+export default function Clock() {
+
+    return (
         <>
-            test
-            <div className={'test'}>
-                asdasdasdasdasd
-
+            <div className="zone">
+                <div className="white-zone">
+                    10:00
+                </div>
+                <Divider />
+                <div className="black-zone">
+                    10:00
+                </div>
             </div>
         </>
     )
