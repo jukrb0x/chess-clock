@@ -1,6 +1,8 @@
 import './index.scss'
+import { useState } from "react";
 
-function Divider(){
+
+function Divider() {
     return (
         <div className="divider">
         </div>
@@ -9,16 +11,21 @@ function Divider(){
 
 
 export default function Clock() {
+    let [leftTimeWhite, setLeftTimeWhite] = useState();
+    let [leftTimeBlack, setLeftTimeBlack] = useState();
+    leftTimeWhite = '10:00';
+    leftTimeBlack = '10:00';
+
 
     return (
         <>
             <div className="zone">
                 <div className="white-zone">
-                    10:00
+                    { leftTimeWhite }
                 </div>
-                <Divider />
+                <Divider/>
                 <div className="black-zone">
-                    10:00
+                    { leftTimeBlack }
                 </div>
             </div>
         </>

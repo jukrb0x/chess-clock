@@ -1,16 +1,20 @@
 $black_primary: #545151;
 $white_primary: #f0e6e6;
-
+$background_active: #21903c;
+$background_inactive: #3a3e40;
+$background_failed: #ff0000;
 
 .zone {
+  background-color: #444343;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  align-content: stretch;
   height: 100%;
   width: 100%;
-  //background-color: $black_primary;
-  //color: $white_primary;
+
   font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
@@ -22,17 +26,33 @@ $white_primary: #f0e6e6;
 
   .white-zone {
     color: $white_primary;
+    height: 100%;
+    width: 100%;
   }
 
   .black-zone {
     color: $black_primary;
+    height: 100%;
+    width: 100%;
+  }
+
+  .inactive {
+    background-color: $background_inactive;
+  }
+
+  .active {
+    background-color: $background_active;
+  }
+
+  .failed {
+    background-color: $background_failed;
   }
 
 }
 
 .divider {
-    width: 100%;
-    height: 1px;
-    background-color: #f3e3e2;
-    //margin: 0.5rem 0;
+  width: 100%;
+  height: 12rem;
+  background-color: #f3e3e2;
+  //margin: 0.5rem 0;
 }
